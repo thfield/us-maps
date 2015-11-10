@@ -15,8 +15,19 @@
 	<div id="force-map" class="container"></div>
   <div id="tooltip" class="hidden"><span class="value"></span></div>
 
-	<script src="js/app.js" charset="utf-8"></script>
-  <!-- <script src="js/force.js" charset="utf-8"></script> -->
+	<!-- <script src="js/app.js" charset="utf-8"></script> -->
+  <script src="js/force.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var chart = apportionForceMap()
+        .width(500)
+        .height(300);
+
+    d3.json("data/colors.json", function(data) {
+      d3.select("#map")
+        .datum(data)
+        .call(chart);
+    });
+  </script>
 </body>
 
 </html>
