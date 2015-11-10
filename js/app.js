@@ -7,7 +7,7 @@ function apportionMap() {
       width = 400,
       height = 250;
 
-var circledata=[{state:'CA',lat:37.19,long:-119.45,scaler:53},{state:'TX',lat:31.47,long:-99.32,scaler:36},{state:'FL',lat:28.62,long:-82.44,scaler:27},{state:'NY',lat:42.95,long:-75.52,scaler:27},{state:'IL',lat:40.04,long:-89.19,scaler:18},{state:'PA',lat:40.87,long:-77.79,scaler:18},{state:'OH',lat:40.28,long:-82.79,scaler:16},{state:'GA',lat:32.64,long:-83.44,scaler:14},{state:'MI',lat:44.34,long:-85.41,scaler:14},{state:'NC',lat:35.55,long:-79.38,scaler:13},{state:'NJ',lat:40.19,long:-74.67,scaler:12},{state:'VA',lat:37.52,long:-78.85,scaler:11},{state:'WA',lat:47.38,long:-120.45,scaler:10},{state:'AZ',lat:34.27,long:-111.65,scaler:9},{state:'IN',lat:39.89,long:-86.28,scaler:9},{state:'MA',lat:42.25,long:-71.8,scaler:9},{state:'TN',lat:35.86,long:-86.35,scaler:9},{state:'MD',lat:39.05,long:-76.79,scaler:8},{state:'MN',lat:46.28,long:-94.3,scaler:8},{state:'MO',lat:38.35,long:-92.45,scaler:8},{state:'WI',lat:44.62,long:-89.99,scaler:8},{state:'AL',lat:32.77,long:-86.92,scaler:7},{state:'CO',lat:38.99,long:-105.54,scaler:7},{state:'SC',lat:33.91,long:-80.89,scaler:7},{state:'KY',lat:37.53,long:-85.3,scaler:6},{state:'LA',lat:31.06,long:-91.99,scaler:6},{state:'CT',lat:41.62,long:-72.72,scaler:5},{state:'OK',lat:35.59,long:-97.49,scaler:5},{state:'OR',lat:43.93,long:-120.56,scaler:5},{state:'AR',lat:34.89,long:-92.44,scaler:4},{state:'IA',lat:42.07,long:-93.49,scaler:4},{state:'KS',lat:38.49,long:-98.38,scaler:4},{state:'MS',lat:32.73,long:-89.66,scaler:4},{state:'NV',lat:39.33,long:-116.62,scaler:4},{state:'UT',lat:39.3,long:-111.66,scaler:4},{state:'NE',lat:41.53,long:-99.79,scaler:3},{state:'NM',lat:34.4,long:-106.11,scaler:3},{state:'WV',lat:38.64,long:-80.62,scaler:3},{state:'HI',lat:20.29,long:-156.37,scaler:2},{state:'ID',lat:44.35,long:-114.6,scaler:2},{state:'ME',lat:45.37,long:-69.24,scaler:2},{state:'NH',lat:43.68,long:-71.58,scaler:2},{state:'RI',lat:41.67,long:-71.55,scaler:2},{state:'AK',lat:64.06,long:-152.23,scaler:1},{state:'DE',lat:38.98,long:-75.5,scaler:1},{state:'DC',lat:38.91,long:-77.01,scaler:1},{state:'MT',lat:47.05,long:-109.64,scaler:1},{state:'ND',lat:47.44,long:-100.46,scaler:1},{state:'SD',lat:44.44,long:-100.22,scaler:1},{state:'VT',lat:44.06,long:-72.66,scaler:1},{state:'WY',lat:42.99,long:-107.55,scaler:1}];
+  var circledata=[{state:'CA',lat:37.19,long:-119.45,scaler:53},{state:'TX',lat:31.47,long:-99.32,scaler:36},{state:'FL',lat:28.62,long:-82.44,scaler:27},{state:'NY',lat:42.95,long:-75.52,scaler:27},{state:'IL',lat:40.04,long:-89.19,scaler:18},{state:'PA',lat:40.87,long:-77.79,scaler:18},{state:'OH',lat:40.28,long:-82.79,scaler:16},{state:'GA',lat:32.64,long:-83.44,scaler:14},{state:'MI',lat:44.34,long:-85.41,scaler:14},{state:'NC',lat:35.55,long:-79.38,scaler:13},{state:'NJ',lat:40.19,long:-74.67,scaler:12},{state:'VA',lat:37.52,long:-78.85,scaler:11},{state:'WA',lat:47.38,long:-120.45,scaler:10},{state:'AZ',lat:34.27,long:-111.65,scaler:9},{state:'IN',lat:39.89,long:-86.28,scaler:9},{state:'MA',lat:42.25,long:-71.8,scaler:9},{state:'TN',lat:35.86,long:-86.35,scaler:9},{state:'MD',lat:39.05,long:-76.79,scaler:8},{state:'MN',lat:46.28,long:-94.3,scaler:8},{state:'MO',lat:38.35,long:-92.45,scaler:8},{state:'WI',lat:44.62,long:-89.99,scaler:8},{state:'AL',lat:32.77,long:-86.92,scaler:7},{state:'CO',lat:38.99,long:-105.54,scaler:7},{state:'SC',lat:33.91,long:-80.89,scaler:7},{state:'KY',lat:37.53,long:-85.3,scaler:6},{state:'LA',lat:31.06,long:-91.99,scaler:6},{state:'CT',lat:41.62,long:-72.72,scaler:5},{state:'OK',lat:35.59,long:-97.49,scaler:5},{state:'OR',lat:43.93,long:-120.56,scaler:5},{state:'AR',lat:34.89,long:-92.44,scaler:4},{state:'IA',lat:42.07,long:-93.49,scaler:4},{state:'KS',lat:38.49,long:-98.38,scaler:4},{state:'MS',lat:32.73,long:-89.66,scaler:4},{state:'NV',lat:39.33,long:-116.62,scaler:4},{state:'UT',lat:39.3,long:-111.66,scaler:4},{state:'NE',lat:41.53,long:-99.79,scaler:3},{state:'NM',lat:34.4,long:-106.11,scaler:3},{state:'WV',lat:38.64,long:-80.62,scaler:3},{state:'HI',lat:20.29,long:-156.37,scaler:2},{state:'ID',lat:44.35,long:-114.6,scaler:2},{state:'ME',lat:45.37,long:-69.24,scaler:2},{state:'NH',lat:43.68,long:-71.58,scaler:2},{state:'RI',lat:41.67,long:-71.55,scaler:2},{state:'AK',lat:64.06,long:-152.23,scaler:1},{state:'DE',lat:38.98,long:-75.5,scaler:1},{state:'DC',lat:38.91,long:-77.01,scaler:1},{state:'MT',lat:47.05,long:-109.64,scaler:1},{state:'ND',lat:47.44,long:-100.46,scaler:1},{state:'SD',lat:44.44,long:-100.22,scaler:1},{state:'VT',lat:44.06,long:-72.66,scaler:1},{state:'WY',lat:42.99,long:-107.55,scaler:1}];
 
   function chart(selection) {
     selection.each(function(data) {
@@ -37,6 +37,10 @@ var circledata=[{state:'CA',lat:37.19,long:-119.45,scaler:53},{state:'TX',lat:31
       state.append('circle')
           .attr('class', function(d) { return d.state + ' ' + data[d.state] })
           .attr('r', function(d) { return Math.sqrt(mult * +d.scaler) })
+          .on('click', function(d){
+            var sticky = d3.select('.sticky');
+            sticky.text(d.state + ' has ' + d.scaler + ' Representatives in Congress.')
+          })
           .on('mouseover', function(d) {
             var tt = d3.select(this)
             tt.classed('highlight',true)
@@ -142,6 +146,10 @@ function apportionForceMap() {
         .attr('cy', function(d) { return d.y; })
         .attr('r', function(d,i) { return Math.sqrt(d.scaler*mult); })
         .attr('class', function(d) { return d.state + ' ' + data[d.state] })
+        .on('click', function(d){
+          var sticky = d3.select('.sticky');
+          sticky.text(d.state + ' has ' + d.scaler + ' Representatives in Congress.')
+        })
         .on('mouseover', function(d) {
           var tt = d3.select(this)
           tt.classed('highlight',true)
@@ -152,9 +160,6 @@ function apportionForceMap() {
           d3.select(this).classed('highlight', false)
           ttHide();
         })
-        //.on('click', function(d){
-        //   ...dosomething...
-        // })
         .call(force.drag);
 
     });
