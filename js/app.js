@@ -1,3 +1,6 @@
+//TODO move shared accessor functions into Class-type structure
+//TODO add method of changing scaler values
+
 function apportionMap() {
   var mult = 7,
       margin = {top: 20, right: 20, bottom: 20, left: 20},
