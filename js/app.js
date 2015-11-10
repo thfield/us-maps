@@ -35,8 +35,9 @@ var circledata=[{state:'CA',lat:37.19,'long':-119.45,scaler:53},{state:'TX',lat:
           .attr('class', function(d) { return d.state + ' ' + data[d.state] })
           .attr('r', function(d) { return Math.sqrt(mult * +d.scaler) })
           .on('mouseover', function(d) {
-            d3.select(this).classed('highlight',true)
-            ttShow(d.state);
+            var tt = d3.select(this)
+            tt.classed('highlight',true)
+            ttFollow(tt,d.state);
           })
           .on('mouseout', function(d){
             d3.select(this).classed('highlight', false)
@@ -45,16 +46,18 @@ var circledata=[{state:'CA',lat:37.19,'long':-119.45,scaler:53},{state:'TX',lat:
       });
     }
 
-  function ttShow(val) {
-    var xPosition = d3.event.pageX;
-    var yPosition = d3.event.pageY;
-    d3.select('#tooltip')
-      .style('left', xPosition + 'px')
-      .style('top', yPosition + 'px')
-      .select('#tooltip .value')
-      .text(val);
-    d3.select('#tooltip').classed('hidden', false);
-  }
+    function ttFollow(element, d, options) {
+      element.on('mousemove', null);
+      element.on('mousemove', function() {
+        var position = d3.mouse(document.body);
+        d3.select('#tooltip')
+          .style('top', ( (position[1] + 30)) + "px")
+          .style('left', ( position[0]) + "px")
+          .select('#tooltip .value')
+          .text(d);
+      });
+      d3.select('#tooltip').classed('hidden', false);
+    };
 
   function ttHide() {
     d3.select('#tooltip').classed('hidden', true);
@@ -137,28 +140,47 @@ function apportionForceMap() {
         .attr('r', function(d,i) { return Math.sqrt(d.scaler*mult); })
         .attr('class', function(d) { return d.state + ' ' + data[d.state] })
         .on('mouseover', function(d) {
-          d3.select(this).classed('highlight',true)
-          ttShow(d.state);
+          var tt = d3.select(this)
+          tt.classed('highlight',true)
+          // ttShow(d.state);
+          ttFollow(tt,d.state);
         })
         .on('mouseout', function(d){
           d3.select(this).classed('highlight', false)
           ttHide();
         })
+        //.on('click', function(d){
+        //   ...dosomething...
+        // })
         .call(force.drag);
 
     });
   }
 
-  function ttShow(val) {
-    var xPosition = d3.event.pageX;
-    var yPosition = d3.event.pageY;
-    d3.select('#tooltip')
-      .style('left', xPosition + 'px')
-      .style('top', yPosition + 'px')
-      .select('#tooltip .value')
-      .text(val);
+  // function ttShow(val) {
+  //   var position = d3.mouse(document.body);
+  //   var xPosition = d3.event.pageX;
+  //   var yPosition = d3.event.pageY;
+  //   d3.select('#tooltip')
+  //     .style('left', xPosition + 'px')
+  //     .style('top', yPosition + 'px')
+  //     .select('#tooltip .value')
+  //     .text(val);
+  //   d3.select('#tooltip').classed('hidden', false);
+  // }
+
+  function ttFollow(element, d, options) {
+    element.on('mousemove', null);
+    element.on('mousemove', function() {
+      var position = d3.mouse(document.body);
+      d3.select('#tooltip')
+        .style('top', ( (position[1] + 30)) + "px")
+        .style('left', ( position[0]) + "px")
+        .select('#tooltip .value')
+        .text(d);
+    });
     d3.select('#tooltip').classed('hidden', false);
-  }
+  };
 
   function ttHide() {
     d3.select('#tooltip').classed('hidden', true);

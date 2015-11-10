@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>The Title Goes Here</title>
+  <title>US Congressional Apportionment</title>
   <link rel="stylesheet" href="css/stylesheet.css">
   <script src="bower_components/d3/d3.min.js"></script>
   <script src="bower_components/topojson/topojson.js"></script>
@@ -24,6 +24,15 @@
 
 	<script src="js/app.js" charset="utf-8"></script>
   <script type="text/javascript">
+    var map = apportionMap()
+        .width(500)
+        .height(300);
+      d3.json("data/colors.json", function(data) {
+      d3.select("#map")
+        .datum(data)
+        .call(map);
+    });
+
     var forceMap = apportionForceMap()
         .width(600)
         .height(400);
@@ -31,15 +40,6 @@
       d3.select("#force-map")
         .datum(data)
         .call(forceMap);
-    });
-
-    var map = apportionMap()
-        .width(500)
-        .height(300);
-    d3.json("data/colors.json", function(data) {
-      d3.select("#map")
-        .datum(data)
-        .call(map);
     });
   </script>
 </body>
