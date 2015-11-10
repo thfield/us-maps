@@ -13,7 +13,7 @@ circle.highlight {
 }
 
 circle {
-	/*fill: #ddd;*/
+	fill: #990aa1;
 	fill-opacity: 0.8;
 	stroke: #aaa;
 }
@@ -51,4 +51,7 @@ circle {
   font-family: sans-serif;
   font-size: 12px;
   line-height: 20px;
+}
+.sticky {
+	padding-left: 100px;
 }
