@@ -11,6 +11,13 @@
 </head>
 
 <body>
+  <script type="text/javascript">
+    function toggleMap(){
+      var map = d3.select(".geo");
+      map.classed("hidden", !map.classed("hidden"));
+    }
+  </script>
+  <button onclick="toggleMap()">Toggle Map</button>
 	<div id="map" class="container"></div>
 	<div id="force-map" class="container"></div>
   <div id="tooltip" class="hidden"><span class="value"></span></div>
