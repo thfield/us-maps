@@ -21,14 +21,22 @@
 	<div id="map" class="container"></div>
 	<div id="force-map" class="container"></div>
   <div id="tooltip" class="hidden"><span class="value"></span></div>
-  <div class="sticky">
-    
-  </div>
+  <div class="sticky"></div>
+<hr/>
+<p>
+    Circles sized according to some other factors:
+</p>
+  <br>
+    <div id="fac1" class="container">Population Density<br></div>
+    <div id="fac2" class="container">Gun Ownership<br></div>
+  <br>
+    <div id="fac3" class="container">Millionaires<br></div>
+    <div id="fac4" class="container">Walmarts<br></div>
 	<script src="js/app.js" charset="utf-8"></script>
   <script type="text/javascript">
     var map = apportionMap()
-        .width(500)
-        .height(300);
+        .width(600)
+        .height(400);
       d3.json("data/colors.json", function(data) {
       d3.select("#map")
         .datum(data)
@@ -42,6 +50,46 @@
       d3.select("#force-map")
         .datum(data)
         .call(forceMap);
+    });
+
+    var f1 = apportionForceMap()
+        .width(500)
+        .height(300)
+        .scaling('popDens');
+    d3.json("data/colors.json", function(data) {
+      d3.select("#fac1")
+        .datum(data)
+        .call(f1);
+    });
+
+    var f2 = apportionForceMap()
+        .width(500)
+        .height(300)
+        .scaling('guns');
+    d3.json("data/colors.json", function(data) {
+      d3.select("#fac2")
+        .datum(data)
+        .call(f2);
+    });
+
+    var f3 = apportionForceMap()
+        .width(500)
+        .height(300)
+        .scaling('millionaires');
+    d3.json("data/colors.json", function(data) {
+      d3.select("#fac3")
+        .datum(data)
+        .call(f3);
+    });
+
+    var f4 = apportionForceMap()
+        .width(500)
+        .height(300)
+        .scaling('walmarts');
+    d3.json("data/colors.json", function(data) {
+      d3.select("#fac4")
+        .datum(data)
+        .call(f4);
     });
   </script>
 </body>

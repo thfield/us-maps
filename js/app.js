@@ -1,25 +1,42 @@
 //TODO move shared accessor functions into Class-type structure
 //TODO add method of changing scaler values
-// var foci=[{state:"AK",x:.2041,y:.7226,"pop-dens":"1.26",guns:.58,area:1723337,walmarts:7,millionaires:12167,"millionaire-freq":31.5},{state:"AL",x:.6404,y:.6308,"pop-dens":"94.65",guns:.52,area:135767,walmarts:90,millionaires:72299,"millionaire-freq":24.2},{state:"AR",x:.5586,y:.5883,"pop-dens":"56.43",guns:.55,area:137732,walmarts:80,millionaires:40756,"millionaire-freq":22.8},{state:"AZ",x:.2851,y:.5796,"pop-dens":"57.05",guns:.31,area:295234,walmarts:62,millionaires:105722,"millionaire-freq":30.9},{state:"CA",x:.1885,y:.4827,"pop-dens":"244.20",guns:.21,area:423967,walmarts:167,millionaires:663394,"millionaire-freq":35.7},{state:"CO",x:.3801,y:.4846,"pop-dens":"49.33",guns:.35,area:269601,walmarts:61,millionaires:89896,"millionaire-freq":31.8},{state:"CT",x:.8065,y:.3825,"pop-dens":"741.40",guns:.17,area:14357,walmarts:32,millionaires:84508,"millionaire-freq":41.4},{state:"DC",x:.7618,y:.4612,"pop-dens":"10,298.00",guns:.04,area:177,walmarts:null,millionaires:null,"millionaire-freq":null},{state:"DE",x:.7814,y:.454,"pop-dens":"470.70",guns:.26,area:6446,walmarts:8,millionaires:17939,"millionaire-freq":34.7},{state:"FL",x:.7156,y:.7163,"pop-dens":"360.20",guns:.25,area:170312,walmarts:191,millionaires:369912,"millionaire-freq":33.6},{state:"GA",x:.6911,y:.6261,"pop-dens":"172.50",guns:.4,area:153910,walmarts:128,millionaires:141701,"millionaire-freq":26.9},{state:"HI",x:.3548,y:.774,"pop-dens":"216.80",guns:.07,area:28313,walmarts:8,millionaires:29423,"millionaire-freq":43.1},{state:"IA",x:.5404,y:.4204,"pop-dens":"54.81",guns:.43,area:145746,walmarts:56,millionaires:50529,"millionaire-freq":26.8},{state:"ID",x:.2781,y:.3375,"pop-dens":"19.50",guns:.55,area:216443,walmarts:19,millionaires:20493,"millionaire-freq":24.6},{state:"IL",x:.5982,y:.4642,"pop-dens":"231.90",guns:.2,area:149995,walmarts:137,millionaires:243350,"millionaire-freq":33.1},{state:"IN",x:.6368,y:.4633,"pop-dens":"182.50",guns:.39,area:94326,walmarts:95,millionaires:104539,"millionaire-freq":26.4},{state:"KS",x:.4759,y:.5044,"pop-dens":"35.09",guns:.42,area:213100,walmarts:55,millionaires:47855,"millionaire-freq":28.2},{state:"KY",x:.6544,y:.5165,"pop-dens":"110.00",guns:.48,area:104656,walmarts:82,millionaires:62394,"millionaire-freq":22.4},{state:"LA",x:.5678,y:.6775,"pop-dens":"105.00",guns:.44,area:135659,walmarts:81,millionaires:64972,"millionaire-freq":23.1},{state:"MA",x:.8153,y:.3643,"pop-dens":"852.10",guns:.13,area:27336,walmarts:44,millionaires:141186,"millionaire-freq":37.1},{state:"MD",x:.7642,y:.4572,"pop-dens":"606.20",guns:.21,area:32131,walmarts:41,millionaires:132354,"millionaire-freq":39.1},{state:"ME",x:.8318,y:.2827,"pop-dens":"43.04",guns:.41,area:91633,walmarts:22,millionaires:22218,"millionaire-freq":24.5},{state:"MI",x:.6396,y:.3581,"pop-dens":"174.80",guns:.38,area:250487,walmarts:79,millionaires:190871,"millionaire-freq":30.6},{state:"MN",x:.5286,y:.3224,"pop-dens":"67.14",guns:.42,area:225163,walmarts:52,millionaires:99246,"millionaire-freq":31},{state:"MO",x:.5562,y:.5071,"pop-dens":"87.26",guns:.42,area:180540,walmarts:117,millionaires:98279,"millionaire-freq":26.7},{state:"MS",x:.6006,y:.6361,"pop-dens":"63.50",guns:.55,area:125438,walmarts:64,millionaires:39270,"millionaire-freq":21.5},{state:"MT",x:.3457,y:.2892,"pop-dens":"6.86",guns:.58,area:380831,walmarts:12,millionaires:14155,"millionaire-freq":22.9},{state:"NC",x:.7408,y:.5468,"pop-dens":"200.60",guns:.41,area:139391,walmarts:118,millionaires:140501,"millionaire-freq":25.9},{state:"ND",x:.4551,y:.2941,"pop-dens":"9.92",guns:.51,area:183108,walmarts:9,millionaires:10163,"millionaire-freq":23.7},{state:"NE",x:.459,y:.4323,"pop-dens":"23.97",guns:.39,area:200330,walmarts:27,millionaires:29862,"millionaire-freq":26.8},{state:"NH",x:.8116,y:.331,"pop-dens":"147.00",guns:.3,area:24214,walmarts:26,millionaires:26498,"millionaire-freq":32.8},{state:"NJ",x:.7876,y:.423,"pop-dens":"1,189.00",guns:.12,area:22591,walmarts:45,millionaires:207693,"millionaire-freq":42.5},{state:"NM",x:.3639,y:.5908,"pop-dens":"17.16",guns:.35,area:314917,walmarts:31,millionaires:30891,"millionaire-freq":25.9},{state:"NV",x:.2345,y:.4455,"pop-dens":"24.80",guns:.34,area:286380,walmarts:26,millionaires:42888,"millionaire-freq":30},{state:"NY",x:.7662,y:.3631,"pop-dens":"415.30",guns:.18,area:141297,walmarts:87,millionaires:368388,"millionaire-freq":33.6},{state:"OH",x:.6819,y:.4468,"pop-dens":"282.50",guns:.32,area:116098,walmarts:136,millionaires:203404,"millionaire-freq":27.8},{state:"OK",x:.4871,y:.5729,"pop-dens":"55.22",guns:.43,area:181037,walmarts:84,millionaires:53939,"millionaire-freq":24.2},{state:"OR",x:.204,y:.3247,"pop-dens":"40.33",guns:.4,area:254799,walmarts:29,millionaires:63943,"millionaire-freq":28.7},{state:"PA",x:.745,y:.4187,"pop-dens":"285.30",guns:.35,area:119280,walmarts:119,millionaires:228270,"millionaire-freq":29.6},{state:"RI",x:.821,y:.3763,"pop-dens":"1,006.00",guns:.13,area:4001,walmarts:9,millionaires:20229,"millionaire-freq":30.2},{state:"SC",x:.7244,y:.5895,"pop-dens":"157.10",guns:.42,area:82933,walmarts:63,millionaires:68178,"millionaire-freq":25.5},{state:"SD",x:.4557,y:.3639,"pop-dens":"10.86",guns:.57,area:199729,walmarts:12,millionaires:11769,"millionaire-freq":23.6},{state:"TN",x:.6431,y:.5576,"pop-dens":"156.60",guns:.44,area:109153,walmarts:104,millionaires:94419,"millionaire-freq":24.4},{state:"TX",x:.4589,y:.6685,"pop-dens":"98.07",guns:.36,area:695662,walmarts:329,millionaires:350727,"millionaire-freq":27.4},{state:"UT",x:.2995,y:.463,"pop-dens":"34.30",guns:.44,area:219882,walmarts:29,millionaires:36348,"millionaire-freq":30},{state:"VA",x:.7419,y:.4996,"pop-dens":"207.30",guns:.35,area:110787,walmarts:87,millionaires:159395,"millionaire-freq":34},{state:"VT",x:.7969,y:.3269,"pop-dens":"67.73",guns:.42,area:24906,walmarts:4,millionaires:11390,"millionaire-freq":28},{state:"WA",x:.2206,y:.2476,"pop-dens":"102.60",guns:.33,area:184661,walmarts:45,millionaires:118132,"millionaire-freq":30.3},{state:"WI",x:.5825,y:.3582,"pop-dens":"105.20",guns:.44,area:169635,walmarts:77,millionaires:99976,"millionaire-freq":28.1},{state:"WV",x:.7148,y:.4791,"pop-dens":"77.06",guns:.55,area:62756,walmarts:34,millionaires:27302,"millionaire-freq":22},{state:"WY",x:.3618,y:.3875,"pop-dens":"5.85",guns:.6,area:253335,walmarts:10,millionaires:8708,"millionaire-freq":25.5}];
-// function compare(a,b) {
-//   if (+a[scaling] > +b[scaling])
-//     return -1;
-//   if (+a[scaling] < +b[scaling])
-//     return 1;
-//   return 0;
-// }
-var scaling = 'reps';
-// // pop-dens .002
-// // guns 1
-// // area .000001
-// // walmarts .005
-// // millionaires .000001
-// // millionaire-freq .01
-// foci.sort(compare);
+
+var fociObj = {AK:{x:0.2041,y:0.7226},AL:{x:0.6404,y:0.6308},AR:{x:0.5586,y:0.5883},AZ:{x:0.2851,y:0.5796},CA:{x:0.1885,y:0.4827},CO:{x:0.3801,y:0.4846},CT:{x:0.8065,y:0.3825},DC:{x:0.7618,y:0.4612},DE:{x:0.7814,y:0.454},FL:{x:0.7156,y:0.7163},GA:{x:0.6911,y:0.6261},HI:{x:0.3548,y:0.774},IA:{x:0.5404,y:0.4204},ID:{x:0.2781,y:0.3375},IL:{x:0.5982,y:0.4642},IN:{x:0.6368,y:0.4633},KS:{x:0.4759,y:0.5044},KY:{x:0.6544,y:0.5165},LA:{x:0.5678,y:0.6775},MA:{x:0.8153,y:0.3643},MD:{x:0.7642,y:0.4572},ME:{x:0.8318,y:0.2827},MI:{x:0.6396,y:0.3581},MN:{x:0.5286,y:0.3224},MO:{x:0.5562,y:0.5071},MS:{x:0.6006,y:0.6361},MT:{x:0.3457,y:0.2892},NC:{x:0.7408,y:0.5468},ND:{x:0.4551,y:0.2941},NE:{x:0.459,y:0.4323},NH:{x:0.8116,y:0.331},NJ:{x:0.7876,y:0.423},NM:{x:0.3639,y:0.5908},NV:{x:0.2345,y:0.4455},NY:{x:0.7662,y:0.3631},OH:{x:0.6819,y:0.4468},OK:{x:0.4871,y:0.5729},OR:{x:0.204,y:0.3247},PA:{x:0.745,y:0.4187},RI:{x:0.821,y:0.3763},SC:{x:0.7244,y:0.5895},SD:{x:0.4557,y:0.3639},TN:{x:0.6431,y:0.5576},TX:{x:0.4589,y:0.6685},UT:{x:0.2995,y:0.463},VA:{x:0.7419,y:0.4996},VT:{x:0.7969,y:0.3269},WA:{x:0.2206,y:0.2476},WI:{x:0.5825,y:0.3582},WV:{x:0.7148,y:0.4791},WY:{x:0.3618,y:0.3875}};
+var factorsObj = {AK: {reps:1,popDens:1.26,guns:0.58,area:1723337,walmarts:7,millionaires:12167,millionairesFreq:31.5},AL: {reps:7,popDens:94.65,guns:0.52,area:135767,walmarts:90,millionaires:72299,millionairesFreq:24.2},AR: {reps:4,popDens:56.43,guns:0.55,area:137732,walmarts:80,millionaires:40756,millionairesFreq:22.8},AZ: {reps:9,popDens:57.05,guns:0.31,area:295234,walmarts:62,millionaires:105722,millionairesFreq:30.9},CA: {reps:53,popDens:244.2,guns:0.21,area:423967,walmarts:167,millionaires:663394,millionairesFreq:35.7},CO: {reps:7,popDens:49.33,guns:0.35,area:269601,walmarts:61,millionaires:89896,millionairesFreq:31.8},CT: {reps:5,popDens:741.4,guns:0.17,area:14357,walmarts:32,millionaires:84508,millionairesFreq:41.4},DC: {reps:1,popDens:10298,guns:0.04,area:177,walmarts:null,millionaires:null,millionairesFreq:null},DE: {reps:1,popDens:470.7,guns:0.26,area:6446,walmarts:8,millionaires:17939,millionairesFreq:34.7},FL: {reps:27,popDens:360.2,guns:0.25,area:170312,walmarts:191,millionaires:369912,millionairesFreq:33.6},GA: {reps:14,popDens:172.5,guns:0.4,area:153910,walmarts:128,millionaires:141701,millionairesFreq:26.9},HI: {reps:2,popDens:216.8,guns:0.07,area:28313,walmarts:8,millionaires:29423,millionairesFreq:43.1},IA: {reps:4,popDens:54.81,guns:0.43,area:145746,walmarts:56,millionaires:50529,millionairesFreq:26.8},ID: {reps:2,popDens:19.5,guns:0.55,area:216443,walmarts:19,millionaires:20493,millionairesFreq:24.6},IL: {reps:18,popDens:231.9,guns:0.2,area:149995,walmarts:137,millionaires:243350,millionairesFreq:33.1},IN: {reps:9,popDens:182.5,guns:0.39,area:94326,walmarts:95,millionaires:104539,millionairesFreq:26.4},KS: {reps:4,popDens:35.09,guns:0.42,area:213100,walmarts:55,millionaires:47855,millionairesFreq:28.2},KY: {reps:6,popDens:110,guns:0.48,area:104656,walmarts:82,millionaires:62394,millionairesFreq:22.4},LA: {reps:6,popDens:105,guns:0.44,area:135659,walmarts:81,millionaires:64972,millionairesFreq:23.1},MA: {reps:9,popDens:852.1,guns:0.13,area:27336,walmarts:44,millionaires:141186,millionairesFreq:37.1},MD: {reps:8,popDens:606.2,guns:0.21,area:32131,walmarts:41,millionaires:132354,millionairesFreq:39.1},ME: {reps:2,popDens:43.04,guns:0.41,area:91633,walmarts:22,millionaires:22218,millionairesFreq:24.5},MI: {reps:14,popDens:174.8,guns:0.38,area:250487,walmarts:79,millionaires:190871,millionairesFreq:30.6},MN: {reps:8,popDens:67.14,guns:0.42,area:225163,walmarts:52,millionaires:99246,millionairesFreq:31},MO: {reps:8,popDens:87.26,guns:0.42,area:180540,walmarts:117,millionaires:98279,millionairesFreq:26.7},MS: {reps:4,popDens:63.5,guns:0.55,area:125438,walmarts:64,millionaires:39270,millionairesFreq:21.5},MT: {reps:1,popDens:6.86,guns:0.58,area:380831,walmarts:12,millionaires:14155,millionairesFreq:22.9},NC: {reps:13,popDens:200.6,guns:0.41,area:139391,walmarts:118,millionaires:140501,millionairesFreq:25.9},ND: {reps:1,popDens:9.92,guns:0.51,area:183108,walmarts:9,millionaires:10163,millionairesFreq:23.7},NE: {reps:3,popDens:23.97,guns:0.39,area:200330,walmarts:27,millionaires:29862,millionairesFreq:26.8},NH: {reps:2,popDens:147,guns:0.3,area:24214,walmarts:26,millionaires:26498,millionairesFreq:32.8},NJ: {reps:12,popDens:1189,guns:0.12,area:22591,walmarts:45,millionaires:207693,millionairesFreq:42.5},NM: {reps:3,popDens:17.16,guns:0.35,area:314917,walmarts:31,millionaires:30891,millionairesFreq:25.9},NV: {reps:4,popDens:24.8,guns:0.34,area:286380,walmarts:26,millionaires:42888,millionairesFreq:30},NY: {reps:27,popDens:415.3,guns:0.18,area:141297,walmarts:87,millionaires:368388,millionairesFreq:33.6},OH: {reps:16,popDens:282.5,guns:0.32,area:116098,walmarts:136,millionaires:203404,millionairesFreq:27.8},OK: {reps:5,popDens:55.22,guns:0.43,area:181037,walmarts:84,millionaires:53939,millionairesFreq:24.2},OR: {reps:5,popDens:40.33,guns:0.4,area:254799,walmarts:29,millionaires:63943,millionairesFreq:28.7},PA: {reps:18,popDens:285.3,guns:0.35,area:119280,walmarts:119,millionaires:228270,millionairesFreq:29.6},RI: {reps:2,popDens:1006,guns:0.13,area:4001,walmarts:9,millionaires:20229,millionairesFreq:30.2},SC: {reps:7,popDens:157.1,guns:0.42,area:82933,walmarts:63,millionaires:68178,millionairesFreq:25.5},SD: {reps:1,popDens:10.86,guns:0.57,area:199729,walmarts:12,millionaires:11769,millionairesFreq:23.6},TN: {reps:9,popDens:156.6,guns:0.44,area:109153,walmarts:104,millionaires:94419,millionairesFreq:24.4},TX: {reps:36,popDens:98.07,guns:0.36,area:695662,walmarts:329,millionaires:350727,millionairesFreq:27.4},UT: {reps:4,popDens:34.3,guns:0.44,area:219882,walmarts:29,millionaires:36348,millionairesFreq:30},VA: {reps:11,popDens:207.3,guns:0.35,area:110787,walmarts:87,millionaires:159395,millionairesFreq:34},VT: {reps:1,popDens:67.73,guns:0.42,area:24906,walmarts:4,millionaires:11390,millionairesFreq:28},WA: {reps:10,popDens:102.6,guns:0.33,area:184661,walmarts:45,millionaires:118132,millionairesFreq:30.3},WI: {reps:8,popDens:105.2,guns:0.44,area:169635,walmarts:77,millionaires:99976,millionairesFreq:28.1},WV: {reps:3,popDens:77.06,guns:0.55,area:62756,walmarts:34,millionaires:27302,millionairesFreq:22},WY: {reps:1,popDens:5.85,guns:0.6,area:253335,walmarts:10,millionaires:8708,millionairesFreq:25.5}};
+
+var factors = {
+      reps: {
+        factor: .02,
+        text:'Representatives in Congress'
+      },
+      popDens: {
+        factor: .002,
+        text:'people per square mile'
+      },
+      guns: {
+        factor: 1,
+        text:'percent gun ownership'
+      },
+      area: {
+        factor: .000001,
+        text:'square kilometers'
+      },
+      walmarts: {
+        factor: .002,
+        text:'Walmarts'
+      },
+      millionaires: {
+        factor: .000001,
+        text: 'millionaires living there'
+      },
+      millionairesFreq: {
+        factor: .01,
+        text: 'millionaires per 1000 households'
+      }
+    };
 
 function apportionMap() {
-  var mult = 7,
-      margin = {top: 20, right: 20, bottom: 20, left: 20},
+  var margin = {top: 20, right: 20, bottom: 20, left: 20},
       width = 400,
       height = 250;
 
@@ -27,6 +44,7 @@ function apportionMap() {
 
   function chart(selection) {
     selection.each(function(data) {
+      var mult = width * .02;
 
       var projection = d3.geo.albersUsa()
               .scale(width)
@@ -53,8 +71,8 @@ function apportionMap() {
 
       state.append('circle')
           .attr('class', function(d) { return d.state + ' ' + data[d.state] })
-          .attr('r', function(d) { return Math.sqrt(mult * +d.scaler) })
-          .on('click', function(d){
+          .attr('r', function(d) { return Math.sqrt(d.scaler*mult) })
+          .on('mousedown', function(d){
             var sticky = d3.select('.sticky');
             sticky.text(d.state + ' has ' + d.scaler + ' Representatives in Congress.')
           })
@@ -110,20 +128,24 @@ function apportionMap() {
 
 function apportionForceMap() {
   var width = 1000,
-      height = 600;
-
-  var foci=[{state:'CA',reps:53,x:.1885,y:.4827},{state:'TX',reps:36,x:.4589,y:.6685},{state:'FL',reps:27,x:.7156,y:.7163},{state:'NY',reps:27,x:.7662,y:.3631},{state:'IL',reps:18,x:.5982,y:.4642},{state:'PA',reps:18,x:.745,y:.4187},{state:'OH',reps:16,x:.6819,y:.4468},{state:'GA',reps:14,x:.6911,y:.6261},{state:'MI',reps:14,x:.6396,y:.3581},{state:'NC',reps:13,x:.7408,y:.5468},{state:'NJ',reps:12,x:.7876,y:.423},{state:'VA',reps:11,x:.7419,y:.4996},{state:'WA',reps:10,x:.2206,y:.2476},{state:'AZ',reps:9,x:.2851,y:.5796},{state:'IN',reps:9,x:.6368,y:.4633},{state:'MA',reps:9,x:.8153,y:.3643},{state:'TN',reps:9,x:.6431,y:.5576},{state:'MD',reps:8,x:.7642,y:.4572},{state:'MN',reps:8,x:.5286,y:.3224},{state:'MO',reps:8,x:.5562,y:.5071},{state:'WI',reps:8,x:.5825,y:.3582},{state:'AL',reps:7,x:.6404,y:.6308},{state:'CO',reps:7,x:.3801,y:.4846},{state:'SC',reps:7,x:.7244,y:.5895},{state:'KY',reps:6,x:.6544,y:.5165},{state:'LA',reps:6,x:.5678,y:.6775},{state:'CT',reps:5,x:.8065,y:.3825},{state:'OK',reps:5,x:.4871,y:.5729},{state:'OR',reps:5,x:.204,y:.3247},{state:'AR',reps:4,x:.5586,y:.5883},{state:'IA',reps:4,x:.5404,y:.4204},{state:'KS',reps:4,x:.4759,y:.5044},{state:'MS',reps:4,x:.6006,y:.6361},{state:'NV',reps:4,x:.2345,y:.4455},{state:'UT',reps:4,x:.2995,y:.463},{state:'NE',reps:3,x:.459,y:.4323},{state:'NM',reps:3,x:.3639,y:.5908},{state:'WV',reps:3,x:.7148,y:.4791},{state:'HI',reps:2,x:.3548,y:.774},{state:'ID',reps:2,x:.2781,y:.3375},{state:'ME',reps:2,x:.8318,y:.2827},{state:'NH',reps:2,x:.8116,y:.331},{state:'RI',reps:2,x:.821,y:.3763},{state:'AK',reps:1,x:.2041,y:.7226},{state:'DE',reps:1,x:.7814,y:.454},{state:'DC',reps:1,x:.7618,y:.4612},{state:'MT',reps:1,x:.3457,y:.2892},{state:'ND',reps:1,x:.4551,y:.2941},{state:'SD',reps:1,x:.4557,y:.3639},{state:'VT',reps:1,x:.7969,y:.3269},{state:'WY',reps:1,x:.3618,y:.3875}];
+      height = 600,
+      scaling = 'reps';
 
   function chart(selection) {
     selection.each(function(data) {
-      var mult = width * .02,
-          nodes = d3.range(foci.length).map(function(i) {
-            return {id:i, state:foci[i].state, scaler:foci[i][scaling], x:foci[i].x*width, y:foci[i].y*height};
-          });
-      foci.forEach(function(el){
-        el.x = el.x*width;
-        el.y = el.y*height;
-      })
+      var mult = width * factors[scaling].factor,
+          nodes = [];
+
+      for (el in fociObj) {
+        var o = {
+          state : el,
+          x: fociObj[el].x*width,
+          y: fociObj[el].y*height,
+          scaler: factorsObj[el][scaling]
+        };
+        nodes.push(o);
+      }
+      nodes.sort(compare);
 
       var svg = d3.select(this).append('svg')
           .attr('width', width)
@@ -144,8 +166,8 @@ function apportionForceMap() {
         var k = 1 * e.alpha;
         // Push nodes toward their designated focus.
         nodes.forEach(function(o, i) {
-          o.y += (foci[o.id].y - o.y) * k;
-          o.x += (foci[o.id].x - o.x) * k;
+          o.y += (fociObj[o.state].y*height - o.y) * k;
+          o.x += (fociObj[o.state].x*width - o.x) * k;
         });
         node
           .attr('cx', function(d) { return d.x; })
@@ -153,9 +175,9 @@ function apportionForceMap() {
       }
 
       force.start();
-      // var n = 500;
-      // for (var i = 0; i < n; ++i) force.tick();
-      // force.stop();
+      var n = 1000 ;
+      for (var i = 0; i < n; ++i) force.tick();
+      force.stop();
 
       node = node.data(nodes);
       node.enter().append('circle')
@@ -165,7 +187,7 @@ function apportionForceMap() {
         .attr('class', function(d) { return d.state + ' ' + data[d.state] })
         .on('click', function(d){
           var sticky = d3.select('.sticky');
-          sticky.text(d.state + ' has ' + d.scaler + ' Representatives in Congress.')
+          sticky.text(d.state + ' has ' + d.scaler + ' ' + factors[scaling].text);
         })
         .on('mouseover', function(d) {
           var tt = d3.select(this)
@@ -181,18 +203,6 @@ function apportionForceMap() {
 
     });
   }
-
-  // function ttShow(val) {
-  //   var position = d3.mouse(document.body);
-  //   var xPosition = d3.event.pageX;
-  //   var yPosition = d3.event.pageY;
-  //   d3.select('#tooltip')
-  //     .style('left', xPosition + 'px')
-  //     .style('top', yPosition + 'px')
-  //     .select('#tooltip .value')
-  //     .text(val);
-  //   d3.select('#tooltip').classed('hidden', false);
-  // }
 
   function ttFollow(element, d, options) {
     element.on('mousemove', null);
@@ -228,5 +238,18 @@ function apportionForceMap() {
     return chart;
   };
 
+  chart.scaling = function(_) {
+    if (!arguments.length) return scaling;
+    scaling = _;
+    return chart;
+  };
   return chart;
+}
+
+function compare(a,b) {
+  if (+a.scaler > +b.scaler)
+    return -1;
+  if (+a.scaler < +b.scaler)
+    return 1;
+  return 0;
 }

@@ -2,7 +2,9 @@ body {
 	background: #fff;
 	font-family: sans-serif;
 }
-
+.container {
+	display: inline-block;
+}
 .hidden {
 	display: none;
 }
