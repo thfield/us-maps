@@ -1,5 +1,5 @@
 #US-Maps
-A way to show Congressional apportionment (and coloring in) via Doring cartogram.
+A way to show Congressional apportionment (and coloring in) via Dorling cartogram.
 
 See it in action [here](http://thfield.github.io/us-maps/)
 
